@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5px;
+  width:100%;
+}
+
+.logo{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-image {
+  width: 75px;
+  height: 75px;
+}
+
+/* .logo-text {
+} */
+
+.menu-button {
+  margin-right:-5px;
+}
+
+.menu-icon {
+  color: #b91f06;
+  transform: scale(2);
+}
+
+.profile-circle {
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: #b91f06;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-text {
+  color:#87CEFA;
+  font-size: 35px;
+  font-weight: 900;
+  margin-top:-8px;
+}

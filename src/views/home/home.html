@@ -1,0 +1,15 @@
+<mat-sidenav-container [class]="user ? 'home' : 'login'">
+
+  <mat-sidenav #sidenav mode="side" [opened]="sidenavOpened" class="sidenav-container">
+    <sidenav/>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content-container" [style.height.px]="containerHeight" [style.padding-left.px]="sidenavOpened ? 0 : 20">
+      <router-outlet *ngIf="user"/>
+      <span *ngIf="!user && loading">Loading</span>
+      <login *ngIf="!user && !loading"/>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

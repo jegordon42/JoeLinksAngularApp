@@ -1,0 +1,45 @@
+.table-container{
+  width:100%;
+  height:100%; 
+  overflow: auto;
+}
+
+.header-cell{
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.mdc-data-table__cell {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.mat-column-visits {
+  text-align: center;
+  padding: 0;
+}
+
+.mat-column-copy {
+  padding: 0;
+}
+
+.mat-column-edit {
+  padding: 0;
+}
+
+.loading{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+::ng-deep .tooltip-class {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+a:visited{
+  color:blue;
+}
+
+

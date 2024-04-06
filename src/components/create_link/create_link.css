@@ -1,0 +1,27 @@
+h1 {
+  margin-top: 0;
+  margin-bottom: 10px;;
+}
+
+i {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.preview-link {
+  margin-bottom:5px;
+}
+
+.create-link {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+.link-name {
+  max-width: 500px;
+}
+
+.submit {
+  max-width: 100px;
+}

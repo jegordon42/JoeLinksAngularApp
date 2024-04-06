@@ -1,0 +1,77 @@
+<div class="table-container" *ngIf="dataSource.data.length > 0; else loading">
+  <table mat-table matSort (matSortChange)="announceSortChange($event)" [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!-- Link name Column -->
+    <ng-container matColumnDef="linkName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span class="header-cell">Link name</span> </th>
+      <td mat-cell *matCellDef="let joeLink">
+        <a [href]="'http://' + joeLink.linkName" target="_blank">{{joeLink.linkName}}</a> 
+      </td>
+    </ng-container>
+  
+    <!-- Copy Column -->
+    <ng-container matColumnDef="copy">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let joeLink"> 
+        <button 
+          mat-icon-button 
+          matTooltip="Copy Joe Link" 
+          [matTooltipClass]="'tooltip-class'"
+          (click)="copy(joeLink.linkName)"
+        >
+          <mat-icon>file_copy</mat-icon>
+        </button> 
+      </td>
+    </ng-container>
+  
+    <!-- Target Column -->
+    <ng-container matColumnDef="target">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <span class="header-cell">Target</span> </th>
+      <td mat-cell *matCellDef="let joeLink"> 
+        <a [href]="joeLink.target" target="_blank">{{formatTarget(joeLink.target)}}</a> 
+      </td>
+    </ng-container>
+  
+    <!-- Delete Column -->
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let joeLink"> 
+        <button 
+          *ngIf="user && (user.email == joeLink.owner || user.email == 'jegordon42@gmail.com')"
+          mat-icon-button 
+          matTooltip="Delete Joe Link" 
+          [matTooltipClass]="'tooltip-class'" 
+          (click)="openDeleteDialog(joeLink)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button> 
+      </td>
+    </ng-container>
+
+    <!-- Owner Column -->
+    <ng-container matColumnDef="owner">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header><span class="header-cell">Owner</span></th>
+        <td mat-cell *matCellDef="let joeLink"> {{joeLink.owner}} </td>
+    </ng-container>
+
+    <!-- Visits Column -->
+    <ng-container matColumnDef="visits">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> <span class="header-cell">Visits</span></th>
+        <td mat-cell *matCellDef="let joeLink"> {{joeLink.visits}} </td>
+    </ng-container>
+
+    <!-- Last access Column -->
+    <ng-container matColumnDef="lastAccess">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> <span class="header-cell">Last access</span></th>
+        <td mat-cell *matCellDef="let joeLink"> {{joeLink.lastAccess}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<ng-template #loading>
+  <div class="loading">
+    Loading
+  </div>
+</ng-template>

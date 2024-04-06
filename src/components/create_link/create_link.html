@@ -1,0 +1,20 @@
+<div class="create-link">
+    <h1>Create a Joe Link</h1>
+    <i>Note: Joe Links are visible to everyone Joe shows them to.</i>
+    <span class="preview-link">https://joelinks.net/{{linkName.value}}</span>
+    <mat-form-field class="link-name">
+        <mat-label>Joe Link Name</mat-label>
+        <input matInput type="text" [formControl]="linkName">
+    </mat-form-field>
+    <mat-form-field class="target-url">
+        <mat-label>Target URL</mat-label>
+        <input matInput [formControl]="targetUrl">
+    </mat-form-field>
+    <button 
+        mat-raised-button
+        class="submit"
+        (click)="createLink()" 
+    >
+        Submit
+    </button>
+</div>

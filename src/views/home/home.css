@@ -1,0 +1,21 @@
+.home {
+  background-color: #87CEFA;
+}
+
+.login {
+  background-color: #87CEFA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+  
+.sidenav-container {
+  background-color: #87CEFA;
+  border: none;
+  width: 300px;
+  height:100%;
+}
+
+.content-container{
+  padding-right: 20px;
+}

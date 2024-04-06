@@ -1,0 +1,32 @@
+<div class="sidenav">
+    <div 
+      class="sidenav-option"
+      [class]="getOptionClass(Page.CREATE_NEW)"
+      (mouseover)="setHover(Page.CREATE_NEW)" 
+      (mouseout)="setHover(Page.UNSPECIFIED)"
+      (click)="setActive(Page.CREATE_NEW)"
+    >
+      <mat-icon>add</mat-icon>
+      <span class="option-text">Create New</span>
+    </div>
+    <div 
+      class="sidenav-option"
+      [class]="getOptionClass(Page.LINKS)"
+      (mouseover)="setHover(Page.LINKS)" 
+      (mouseout)="setHover(Page.UNSPECIFIED)"
+      (click)="setActive(Page.LINKS)"
+    >
+      <mat-icon>link</mat-icon>
+      <span class="option-text">Links</span>
+    </div>
+    <div 
+      class="sidenav-option"
+      [class]="getOptionClass(Page.ABOUT)"
+      (mouseover)="setHover(Page.ABOUT)" 
+      (mouseout)="setHover(Page.UNSPECIFIED)"
+      (click)="setActive(Page.ABOUT)"
+    >
+      <mat-icon>help_outline</mat-icon>
+      <span class="option-text">About</span>
+    </div>
+  </div>

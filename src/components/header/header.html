@@ -1,0 +1,19 @@
+<div class="header">
+  <div class="logo">
+    <button 
+      mat-button 
+      *ngIf="showMenuButton" 
+      (click)="toggleMenu()"
+      class="menu-button"
+    >
+        <mat-icon class="menu-icon" fontIcon="menu" size="large"/>
+    </button>
+    <img class="logo-image" src="../assets/rocket.png"/>
+    <h1 *ngIf="showLogoText" class="logo-text">Joe Links</h1>
+  </div>
+  <div *ngIf="showProfileCircle" class="profile-circle" (click)="logout()">
+    <span class="profile-text">
+      {{logoText}}
+    </span>
+  </div>
+</div>

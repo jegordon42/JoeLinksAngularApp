@@ -1,0 +1,16 @@
+<div class="lookup-page">
+    <ng-container *ngIf="loading">
+        Loading
+    </ng-container>
+    <ng-container *ngIf="!loading && !linkExists">
+        <img class="oh-no-joe" src="../../assets/ohNoJoe.png"/>
+        <h1>{{linkName}} doesn't exist.</h1>
+        <h2>Do you want to create a new Joe Link?!</h2>
+        <button 
+            mat-raised-button
+            (click)="navigateToCreate(linkName)" 
+        >
+            Create Link
+        </button>
+    </ng-container>
+</div>
