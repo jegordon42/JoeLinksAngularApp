@@ -1,5 +1,7 @@
 # JoeLinks
 
+This is an app that creates shortUrls so I can get to my frequently used websites easily from any device! I use Firebase for storage and authentication.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
 
 ## Development server
